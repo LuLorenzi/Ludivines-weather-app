@@ -1,11 +1,12 @@
 body {
-  background-color: #b8b8ff;
+  background-color: #a3c2e0;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
+  color: #07325f;
 }
 
-.search-form {
-  background: #f8f7ff;
+.search-form-box {
+  background: #ffffff;
   margin: 25px auto;
   padding: 8px;
   max-width: 600px;
@@ -13,10 +14,49 @@ body {
   border-radius: 5px;
 }
 
+.search-form-city {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.search-form-button {
+  background-color: #07325f;
+  border: none;
+  border-radius: 5px;
+  width: 19%;
+  padding: 15px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
 .weather-info {
-  background: #f8f7ff;
+  background: #ffffff;
   margin: 15px auto;
   max-width: 600px;
+  padding: 8px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 5px;
+}
+
+.current-data {
+  text-align: center;
+}
+
+.current-city-name {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.current-temp {
+  font-weight: 800;
+  font-size: 25px;
+  background-color: #f0f5fa;
+  margin: 0px auto;
+  max-width: 33%;
   padding: 8px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 5px;
@@ -26,4 +66,10 @@ footer {
   font-size: 12px;
   margin: 15px auto;
   max-width: 500px;
+  text-align: center;
+  color: black;
+}
+
+a {
+  color: #07325f;
 }
