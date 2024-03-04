@@ -1,12 +1,17 @@
 body {
-  background-color: #a3c2e0;
+  background-image: url(img/Sunshine-sky.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+    background-color: #C3DEF9;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   color: #07325f;
 }
 
 .search-form-box {
-  background: #ffffff;
+  background: rgb(255, 255, 255, 30%);
   margin: 25px auto;
   padding: 8px;
   max-width: 600px;
@@ -24,20 +29,19 @@ body {
 }
 
 .search-form-button {
-  background-color: #07325f;
+  background: rgb(255, 255, 255, 0);
   border: none;
   border-radius: 5px;
   width: 19%;
-  padding: 15px;
-  font-size: 15px;
-  color: #ffffff;
+  padding: 0;
+  font-size: 25px;
 }
 
 .weather-info {
-  background: #ffffff;
+  background: rgb(255, 255, 255, 30%);
   margin: 15px auto;
   max-width: 600px;
-  padding: 8px;
+  padding: 15px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 5px;
 }
@@ -46,15 +50,17 @@ body {
   text-align: center;
 }
 
-.current-city-name {
-  font-size: 22px;
-  font-weight: 500;
+h2 {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  font-style: italic;
 }
 
 .current-temp {
   font-weight: 800;
   font-size: 25px;
-  background-color: #f0f5fa;
+  background-color: #ffffff;
   margin: 0px auto;
   max-width: 33%;
   padding: 8px;
@@ -62,12 +68,39 @@ body {
   border-radius: 5px;
 }
 
-footer {
-  font-size: 12px;
+.upcoming-hours {
+  list-style: none;
+  display: flex;
+  font-size: 13px;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+  margin: 0px auto;
+  padding: 8px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 5px;
+}
+
+.upcoming-days {
+  list-style: none;
+  display: flex;
+  font-size: 13px;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+  margin: 0px auto;
+  padding: 8px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 5px;
+}
+
+.footer {
+  font-size: 10px;
   margin: 15px auto;
   max-width: 500px;
-  text-align: center;
   color: black;
+  padding: 0px;
+  text-align: center;
 }
 
 a {
