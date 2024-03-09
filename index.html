@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Ludivine's weather app</title>
   </head>
   <body>
@@ -28,9 +29,10 @@
     <main class="weather-info">
       <div class="current-data">
         <h1 id="city">City</h1>
-        <p class="current-temp">
+        <p class="current-temp" id="current-temp">
           Temperature
-          <br />
+        </p>
+        <p class="emoji" id="emoji">
           🌥
         </p>
         <p class="current-humidity-UV">Current humidity, UV</p>
