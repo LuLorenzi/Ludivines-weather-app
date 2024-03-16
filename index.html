@@ -23,159 +23,68 @@
           class="search-form-city"
           id="search-input"
         />
-        <input type="submit" value="🔎" class="search-form-button">
+        <input type="submit" value="🔎" class="search-form-button" />
       </form>
     </header>
     <main class="weather-info">
       <div class="current-data">
         <h1 id="city">City</h1>
-        <p class="current-temp" id="current-temp">
-          Temp
-        </p>
-        <p class="emoji" id="emoji">
-          🌥
-        </p>
+        <p class="current-temp" id="current-temp">Temp</p>
+        <p class="emoji" id="emoji">🌥</p>
         <p><span id="current-time"></span>, <span id="description"></span></p>
-        <p>Wind: <span id="current-wind"></span>, Humidity: <span id="humidity"></span></p>
+        <p>
+          Wind: <span id="current-wind"></span>, Humidity:
+          <span id="humidity"></span>
+        </p>
       </div>
       <br />
       <div>
         <h2>Upcoming hours</h2>
-          <ul class="upcoming-hours">
-          <li>
-            11
-            <br />
-            Temp
-            <br />
-            ☀
-            <br />
-            Hum%
-          </li>
-          <li>
-            12
-            <br />
-            Temp
-            <br />
-            ☀
-            <br />
-            Hum%
-          </li>
-          <li>
-            13
-            <br />
-            Temp
-            <br />
-            ☀
-            <br />
-            Hum%
-          </li>
-          <li>
-            14
-            <br />
-            Temp
-            <br />
-            ☀
-            <br />
-            Hum%
-          </li>
-          <li>
-            15
-            <br />
-            Temp
-            <br />
-            ☀
-            <br />
-            Hum%
-          </li>
-          <li>
-            16
-            <br />
-            Temp
-            <br />
-            ☀
-            <br />
-            Hum%
-          </li>
-        </ul>
-      </div>
+        <div class="upcoming-hours">
+          <div class="row">
+            <div class="col-1">
+              <div class="weather-hourly-hour">10</div>
+              <span class="weather-hourly-emoji">☀</span>
+              <div class="weather-hourly-forecast">
+                <div class="weather-hourly-temperature">Max °C</div>
+                <div class="weather-hourly-hum">0 %</div>
+              </div>
+            </div>
+          </div>
+        </div>
       <div>
         <h2>Upcoming days</h2>
-        <ul class="upcoming-days">
-          <li>
-            Mon
-            <br />
-            <span id="forecast-max-temp">Max temp</span>
-            <br>
-            <span id="forecast-min-temp">Min temp</span>
-            <br />
-            ☀
-          </li>
-          <li>
-            Tue
-            <br>
-            <span id="forecast-max-temp">Max temp</span>
-            <br>
-            <span id="forecast-min-temp">Min temp</span>
-            <br />
-            ☀
-          </li>
-          <li>
-            Wed
-            <br>
-            <span id="forecast-max-temp">Max temp</span>
-            <br>
-            <span id="forecast-min-temp">Min temp</span>
-            <br />
-            ☀
-          </li>
-          <li>
-            Thu
-            <br>
-            <span id="forecast-max-temp">Max temp</span>
-            <br>
-            <span id="forecast-min-temp">Min temp</span>
-            <br />
-            ☀
-          </li>
-          <li>
-            Fri
-            <br>
-            <span id="forecast-max-temp">Max temp</span>
-            <br>
-            <span id="forecast-min-temp">Min temp</span>
-            <br />
-            ☀
-          </li>
-          <li>
-            Sat
-            <br>
-            <span id="forecast-max-temp">Max temp</span>
-            <br>
-            <span id="forecast-min-temp">Min temp</span>
-            <br />
-            ☀
-          </li>
-        </ul>
+        <div class="upcoming-days">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-day">Sun</div>
+              <span class="weather-forecast-emoji">☀</span>
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperatures-max">Max °C</span>
+                <span class="weather-forecast-temperatures-min">Min °C</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="footer">
+          Coded by
+          <a href="https://github.com/LuLorenzi" target="_blank"
+            >Ludivine Lorenzi</a
+          >
+          ,
+          <a
+            href="https://github.com/LuLorenzi/Ludivines-weather-app"
+            target="_blank"
+            >open-sourced on Github</a
+          >
+          and
+          <a
+            href="https://app.netlify.com/teams/lulorenzi/overview"
+            target="_blank"
+            >hosted on Netlify</a
+          >
+        </p>
       </div>
-      <br />
-      <p class="footer">
-        Coded by
-        <a href="https://github.com/LuLorenzi" target="_blank"
-          >Ludivine Lorenzi</a
-        >
-        ,
-        <a
-          href="https://github.com/LuLorenzi/Ludivines-weather-app"
-          target="_blank"
-          >open-sourced on Github</a
-        >
-        and
-        <a
-          href="https://app.netlify.com/teams/lulorenzi/overview"
-          target="_blank"
-          >hosted on Netlify</a
-        >
-      </p>
     </main>
     <script src="Src/script.js"></script>
   </body>

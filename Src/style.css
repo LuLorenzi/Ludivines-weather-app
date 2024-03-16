@@ -4,7 +4,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-    background-color: #C3DEF9;
+  background-color: #c3def9;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   color: #07325f;
@@ -81,29 +81,47 @@ p {
 }
 
 .upcoming-hours {
-  list-style: none;
-  display: flex;
-  font-size: 13px;
-  justify-content: space-between;
   padding: 10px;
   background-color: #ffffff;
   margin: 0px auto;
   padding: 8px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 5px;
+  text-align: center;
+}
+
+.weather-hourly-hour {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.weather-hourly-emoji {
+  font-size: 20px;
+}
+.weather-hourly-temperature, .weather-hourly-hum {
+  opacity: 0.8;
 }
 
 .upcoming-days {
-  list-style: none;
-  display: flex;
-  font-size: 13px;
-  justify-content: space-between;
   padding: 10px;
   background-color: #ffffff;
   margin: 0px auto;
   padding: 8px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 5px;
+  text-align: center;
+}
+
+.weather-forecast-day {
+  font-size: 15px;
+}
+
+.weather-forecast-emoji {
+  font-size: 20px;
+}
+
+.weather-forecast-temperatures-min {
+  opacity: 0.6;
 }
 
 .footer {
