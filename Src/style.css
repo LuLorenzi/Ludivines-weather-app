@@ -111,6 +111,7 @@ p {
   margin: 0px auto;
   border-radius: 5px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  text-align: center;
 }
 
 .weather-forecast-day {

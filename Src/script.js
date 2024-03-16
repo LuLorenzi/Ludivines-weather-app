@@ -17,6 +17,8 @@ function updateWeather(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   temperatureElement.innerHTML = `${Math.round(temperature)}°C`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -44,6 +46,12 @@ function handleSearchSubmit(event) {
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = searchInput.value;
   searchCity(searchInput.value);
+}
+
+function getForecast(city) {
+  let apiKey = "fb7f9ao5305aa93b380c3d2e8366342t";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
 }
 
 function displayForecast() {
@@ -74,4 +82,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Cardiff");
-displayForecast();
