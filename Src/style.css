@@ -98,18 +98,19 @@ p {
 .weather-hourly-emoji {
   font-size: 20px;
 }
-.weather-hourly-temperature, .weather-hourly-hum {
+.weather-hourly-temperature,
+.weather-hourly-hum {
   opacity: 0.8;
 }
 
-.upcoming-days {
-  padding: 10px;
+.weather-forecast-days {
+  display: flex;
+  justify-content: space-evenly;
   background-color: #ffffff;
+  padding: 10px;
   margin: 0px auto;
-  padding: 8px;
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 5px;
-  text-align: center;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
 }
 
 .weather-forecast-day {
@@ -118,6 +119,12 @@ p {
 
 .weather-forecast-emoji {
   font-size: 20px;
+}
+
+.weather-forecast-temperatures {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
 }
 
 .weather-forecast-temperatures-min {

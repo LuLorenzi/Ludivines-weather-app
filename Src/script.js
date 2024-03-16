@@ -46,7 +46,32 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+            <div class="weather-forecast-days" id="forecast">
+              <div class="weather-forecast-day">${day}</div>
+              <span class="weather-forecast-emoji">☀</span>
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperatures-max">Max °C</span>
+                <span class="weather-forecast-temperatures-min">Min °C</span>
+              </div>
+            </div>
+          </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Cardiff");
+displayForecast();
