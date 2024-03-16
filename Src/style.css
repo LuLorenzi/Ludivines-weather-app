@@ -118,8 +118,10 @@ p {
   font-size: 15px;
 }
 
-.weather-forecast-emoji {
-  font-size: 20px;
+.weather-forecast-icon {
+  width: 70px;
+display: block;
+margin: 0 auto;
 }
 
 .weather-forecast-temperatures {
