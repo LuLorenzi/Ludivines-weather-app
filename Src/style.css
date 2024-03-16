@@ -80,7 +80,9 @@ p {
   padding: 8px;
 }
 
-.upcoming-hours {
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
   padding: 10px;
   background-color: #ffffff;
   margin: 0px auto;
@@ -90,38 +92,19 @@ p {
   text-align: center;
 }
 
-.weather-hourly-hour {
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.weather-hourly-emoji {
-  font-size: 20px;
-}
-.weather-hourly-temperature,
-.weather-hourly-hum {
-  opacity: 0.8;
-}
-
-.weather-forecast-days {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-}
-
-.weather-forecast-day {
+.weather-forecast-dates .weather-forecast-day {
   font-size: 15px;
 }
 
 .weather-forecast-icon {
-  width: 70px;
-display: block;
-margin: 0 auto;
+  width: 60px;
+  display: block;
+  margin: 0 auto;
 }
 
 .weather-forecast-temperatures {
   display: flex;
-  justify-content: center
+  justify-content: space-between;
   font-size: 13px;
 }
 

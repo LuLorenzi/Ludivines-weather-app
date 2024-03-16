@@ -68,7 +68,7 @@ function displayForecast(response) {
       forecastHtml =
         forecastHtml +
         `
-            <div id="forecast">
+            <div class="weather-forecast-dates">
               <div class="weather-forecast-day">${formatDay(day.time)}</div>
               <div>
               <img src="${
