@@ -1,13 +1,8 @@
-body {
-  background-image: url(img/Sunshine-sky.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #c3def9;
+body{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   color: #07325f;
+  background-color: #c3def9;
 }
 
 .search-form-box {
@@ -41,17 +36,22 @@ body {
   cursor: pointer;
 }
 
-.weather-info {
+.weather-info-container {
   background: rgb(255, 255, 255, 30%);
   margin: 15px auto;
   max-width: 600px;
   padding: 15px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 5px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .current-data {
   text-align: center;
+  color: #ffffff;
 }
 
 h1 {
@@ -125,11 +125,15 @@ p {
   font-size: 10px;
   margin: 15px auto;
   max-width: 500px;
-  color: black;
+  color: #ffffff;
   padding: 0px;
   text-align: center;
 }
 
 a {
   color: #07325f;
+}
+
+a:hover {
+  color: #c3def9;
 }

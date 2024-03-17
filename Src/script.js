@@ -16,43 +16,74 @@ function updateWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
   formatDate();
+  changeBackground();
   getForecast(response.data.city);
 }
 
+function changeBackground() {
+  let backgroundElement = document.querySelector("#weather-info-container");
+  let time = new Date().getHours();
+  if (time < 5) {
+    backgroundElement.style.backgroundImage = "url(src/img/Night1.jpg)";
+  } else if (time < 10) {
+    backgroundElement.style.backgroundImage = "url(src/img/Sunrise1.jpg)";
+  } else if (time < 17) {
+    backgroundElement.style.backgroundImage = "url(src/img/Day1.jpg)";
+  } else if (time < 22) {
+    backgroundElement.style.backgroundImage = "url(src/img/Sunset1.jpg)";
+  } else {
+    backgroundElement.style.backgroundImage = "url(src/img/Night1.jpg)";
+  }
+}
+
 function formatDate(timestamp) {
-let now = new Date();
-console.log(now.getFullYear());
+  let now = new Date();
+  console.log(now.getFullYear());
 
-let timeElement = document.querySelector("#current-time");
+  let timeElement = document.querySelector("#current-time");
 
-let date = now.getDate();
-let hours = now.getHours();
-let minutes = now.getMinutes();
-let year = now.getFullYear();
+  let date = now.getDate();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let year = now.getFullYear();
 
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let day = days[now.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-let month = months[now.getMonth()];
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
 
-    timeElement.innerHTML = `${day} ${date} ${month} ${year}, ${hours}:${minutes}`;
-    }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
 
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[now.getMonth()];
 
+  timeElement.innerHTML = `${day} ${date} ${month} ${year}, ${hours}:${minutes}`;
+}
 
 function searchCity(city) {
   let apiKey = "fb7f9ao5305aa93b380c3d2e8366342t";
