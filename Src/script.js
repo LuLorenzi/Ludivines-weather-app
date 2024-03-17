@@ -23,23 +23,36 @@ function updateWeather(response) {
 function changeBackground() {
   let backgroundElement = document.querySelector("#weather-info-container");
   let time = new Date().getHours();
+
+  let picture;
   if (time < 5) {
-    backgroundElement.style.backgroundImage = "url(src/img/Night1.jpg)";
+    picture = "Night";
   } else if (time < 10) {
-    backgroundElement.style.backgroundImage = "url(src/img/Sunrise1.jpg)";
+    picture = "Sunrise";
   } else if (time < 17) {
-    backgroundElement.style.backgroundImage = "url(src/img/Day1.jpg)";
+    picture = "Day";
   } else if (time < 22) {
-    backgroundElement.style.backgroundImage = "url(src/img/Sunset1.jpg)";
+    picture = "Sunset";
   } else {
-    backgroundElement.style.backgroundImage = "url(src/img/Night1.jpg)";
+    picture = "Night";
   }
+
+  let number = 2;
+  let weather = document.querySelector("#background-selector");
+
+  if (weather.includes("cloud")) {
+    number = 2;
+  } else if (weather.includes("rain")) {
+    number = 3;
+  } else {
+    number = 1;
+  }
+
+  backgroundElement.style.backgroundImage = `url(src/img/${picture}${number}.jpg)`;
 }
 
 function formatDate(timestamp) {
   let now = new Date();
-  console.log(now.getFullYear());
-
   let timeElement = document.querySelector("#current-time");
 
   let date = now.getDate();
