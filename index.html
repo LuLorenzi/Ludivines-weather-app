@@ -23,15 +23,17 @@
           class="search-form-city"
           id="search-input"
         />
-        <input type="submit" value="🔎" class="search-form-button" />
+        <input type="submit" value="🔍" class="search-form-button" />
       </form>
     </header>
     <main class="weather-info">
       <div class="current-data">
         <h1 id="city">City</h1>
-        <p class="current-temp" id="current-temp">Temp</p>
-        <p class="emoji" id="emoji">🌥</p>
-        <p><span id="current-time"></span>, <span id="description"></span></p>
+        <p id="current-time">Time</p>
+        <p class="current-temp-container"> <span class="current-temp" id="current-temp">Temp</span><span class="weather-app-unit">°C</span>
+        <span class="emoji" id="emoji">🌥</span>
+        </p>
+        <p>Currently: <span id="description"></span>,</p>
         <p>
           Wind: <span id="current-wind"></span>, Humidity:
           <span id="humidity"></span>
