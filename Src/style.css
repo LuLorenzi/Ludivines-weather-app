@@ -1,8 +1,8 @@
-body{
+body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   color: #07325f;
-  background-color: #c3def9;
+  background-color: #07325f;
 }
 
 .search-form-box {
@@ -11,7 +11,7 @@ body{
   max-width: 600px;
   background-color: #ffffff;
   border-radius: 5px;
-  opacity: 60%;
+  opacity: 50%;
 }
 
 .search-form-city {
@@ -37,16 +37,19 @@ body{
 }
 
 .weather-info-container {
-  background: rgb(255, 255, 255, 30%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.weather-info {
+  background: rgb(255, 255, 255, 50%);
   margin: 15px auto;
   max-width: 600px;
   padding: 15px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 5px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .current-data {
@@ -131,9 +134,9 @@ p {
 }
 
 a {
-  color: #07325f;
+  color: #c3def9;
 }
 
 a:hover {
-  color: #c3def9;
+  color: #ffffff;
 }
