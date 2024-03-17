@@ -4,35 +4,55 @@ function updateWeather(response) {
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let windSpeedElement = document.querySelector("#current-wind");
-  let timeElement = document.querySelector("#current-time");
-  let date = new Date(response.data.time * 1000);
   let humidityElement = document.querySelector("#humidity");
   let iconElement = document.querySelector("#emoji");
 
   cityElement.innerHTML = response.data.city;
-  timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  temperatureElement.innerHTML = `${Math.round(temperature)}°C`;
+  temperatureElement.innerHTML = `${Math.round(temperature)}`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
+  formatDate();
   getForecast(response.data.city);
 }
 
-function formatDate(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  let day = days[date.getDay()];
+function formatDate(timestamp) {
+let now = new Date();
+console.log(now.getFullYear());
 
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+let timeElement = document.querySelector("#current-time");
 
-  return `${day} ${hours}:${minutes}`;
-}
+let date = now.getDate();
+let hours = now.getHours();
+let minutes = now.getMinutes();
+let year = now.getFullYear();
+
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let day = days[now.getDay()];
+
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let month = months[now.getMonth()];
+
+    timeElement.innerHTML = `${day} ${date} ${month} ${year}, ${hours}:${minutes}`;
+    }
+
+
 
 function searchCity(city) {
   let apiKey = "fb7f9ao5305aa93b380c3d2e8366342t";
