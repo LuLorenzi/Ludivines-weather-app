@@ -37,7 +37,7 @@ function changeBackground() {
     picture = "Night";
   }
 
-  let number = 2;
+  let number;
   let weather = document.querySelector("#background-selector");
 
   if (weather.includes("cloud")) {
