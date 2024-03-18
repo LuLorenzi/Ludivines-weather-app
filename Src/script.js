@@ -16,11 +16,11 @@ function updateWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
   formatDate();
-  changeBackground();
+  changeBackground(response.data.condition.icon);
   getForecast(response.data.city);
 }
 
-function changeBackground() {
+function changeBackground(icon) {
   let backgroundElement = document.querySelector("#weather-info-container");
   let time = new Date().getHours();
 
@@ -38,17 +38,16 @@ function changeBackground() {
   }
 
   let number;
-  let weather = document.querySelector("#description");
 
-  if (weather.includes("cloud")) {
+  if (icon.includes("cloud")) {
     number = 2;
-  } else if (weather.includes("rain")) {
+  } else if (icon.includes("rain")) {
     number = 3;
   } else {
     number = 1;
   }
 
-  backgroundElement.style.backgroundImage = `url(src/img/${picture}${number}.jpg)`;
+  backgroundElement.style.backgroundImage = `url("src/img/${picture}${number}.jpg")`;
 }
 
 function formatDate(timestamp) {
