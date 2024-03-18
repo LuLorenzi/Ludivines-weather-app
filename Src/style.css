@@ -1,7 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  color: #07325f;
+  color: rgb(7, 50, 95);
   background-color: #07325f;
 }
 
@@ -9,9 +9,23 @@ body {
   margin: 25px auto;
   padding: 8px;
   max-width: 600px;
-  background-color: #ffffff;
+  background: rgb(0, 0, 0, 30%);
   border-radius: 5px;
-  opacity: 50%;
+}
+
+input[type="search"]::placeholder {
+  color: #ffffff;
+}
+
+input,
+select,
+textarea {
+  color: #ffffff;
+}
+
+textarea:focus,
+input:focus {
+  color: #ffffff;
 }
 
 .search-form-city {
@@ -44,7 +58,7 @@ body {
 }
 
 .weather-info {
-  background: rgb(255, 255, 255, 50%);
+  background: rgb(0, 0, 0, 30%);
   margin: 15px auto;
   max-width: 600px;
   padding: 15px;

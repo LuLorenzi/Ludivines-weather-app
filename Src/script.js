@@ -39,13 +39,15 @@ function changeBackground(icon) {
 
   let number;
 
-  if (icon.includes("cloud")) {
-    number = 2;
-  } else if (icon.includes("rain")) {
-    number = 3;
-  } else {
-    number = 1;
-  }
+    if (icon.includes("cloud")) {
+      number = 2;
+    } else if (icon.includes("rain")) {
+      number = 3;
+    } else if (icon.includes("snow")) {
+      number = 4;
+    } else {
+      number = 1;
+    }
 
   backgroundElement.style.backgroundImage = `url("src/img/${picture}${number}.jpg")`;
 }
